@@ -1,7 +1,7 @@
 # Using EESSI + `direnv` to ship a workflow execution environment
 
 This repository shows a trivial example of how one can use [the `direnv` tool](https://direnv.net/) together with [EESSI](https://eessi.github.io/docs/)
-to ship the complete execution environment for a [Nextflow](https://www.nextflow.io/) pipeline.
+to ship the complete execution environment for a [Nextflow](https://www.nextflow.io/) pipeline (including Nextflow itself).
 
 Once things are in place, running the code is a matter of entering the repository directory and running:
 ```
