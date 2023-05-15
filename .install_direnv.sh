@@ -4,4 +4,7 @@ mkdir -p $HOME/.local/bin &&
 curl -sfL https://direnv.net/install.sh | bash &&
 # Add the direnv hook to our shell
 echo 'eval "$(direnv hook bash)"' >> $HOME/.bashrc &&
+echo ""
+echo "-----------------------"
 echo "-- Installed direnv! --"
+echo "-----------------------"
