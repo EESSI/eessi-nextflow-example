@@ -1,0 +1,25 @@
+name: smoketest_workflow
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+# Declare default permissions as read only.
+permissions: read-all
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+    - uses: eessi/github-action-eessi@v2
+    - name: Test workflow
+      run: |
+        # Environment is completely configured via .envrc
+        ./hello_plus_version.nf
+      shell: bash
+    - name: Test caching effect EESSI
+      run: |
+        ./hello_plus_version.nf
+      shell: bash
