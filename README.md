@@ -9,14 +9,14 @@ Once EESSI and `direnv` are in place and configured, running the code is a matte
 ```
 
 ## Caveats
-* You need to have EESSI and `direnv` available on the system. Soon this will be limited to just haveing EESSI on the system (once EESSI ships `direnv`).
+* You need to have EESSI and `direnv` available on the system. Soon this will be limited to just having EESSI on the system (once EESSI ships `direnv`).
   * The repository uses the `.envrc` file to allow `direnv` to configure the environment (which it gets from EESSI).
 * You need to have `direnv` enabled for your shell (e.g., `eval "$(direnv hook bash)"` for `bash`). A helper script to install and configure `direnv` is available
   (but it is pretty invasive so is hidden)
   ```
   source .install_direnv.sh
   ```
-* You need to whitelist the repository directory for `direnv`:
+* You need to whitelist the repository directory for `direnv` (`direnv` will also tell you this once you are inside the repository directory):
   ```
   direnv allow
   ```
