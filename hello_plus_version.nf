@@ -23,5 +23,5 @@ process getVersionTensorFlow {
 
 workflow {
   Channel.of('Bonjour', 'Ciao', 'Hello', 'Hola') | sayHello | view
-  getVersionGROMACS | view
+  getVersionTensorFlow | view
 }
