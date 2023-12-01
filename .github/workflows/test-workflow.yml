@@ -13,13 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: eessi/github-action-eessi@v2
+    - uses: eessi/github-action-eessi@v3
     - name: Test workflow
+      shell: bash
       run: |
         # Environment is completely configured via .envrc
         ./hello_plus_version.nf
-      shell: bash
     - name: Test caching effect EESSI
+      shell: bash
       run: |
         ./hello_plus_version.nf
-      shell: bash

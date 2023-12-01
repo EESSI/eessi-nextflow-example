@@ -12,16 +12,16 @@ process sayHello {
     """
 }
 
-process getVersionGROMACS {
+process getVersionTensorFlow {
   output:
     stdout
   script:
     """
-    gmx --version
+    python -c "import tensorflow; print(tensorflow.__version__)"
     """
 }
 
 workflow {
   Channel.of('Bonjour', 'Ciao', 'Hello', 'Hola') | sayHello | view
-  getVersionGROMACS | view
+  getVersionTensorFlow | view
 }
