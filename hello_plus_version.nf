@@ -12,12 +12,12 @@ process sayHello {
     """
 }
 
-process getVersionGROMACS {
+process getVersionTensorFlow {
   output:
     stdout
   script:
     """
-    gmx --version
+    python -c "import tensorflow; print(tensorflow.__version__)"
     """
 }
 
