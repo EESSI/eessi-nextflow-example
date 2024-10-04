@@ -20,3 +20,5 @@ Once EESSI and `direnv` are in place and configured, running the code is a matte
   ```
   direnv allow
   ```
+
+This is a Pull Request
